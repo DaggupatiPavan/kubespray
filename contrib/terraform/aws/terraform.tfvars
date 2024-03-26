@@ -1,18 +1,8 @@
 #Global Vars
 aws_cluster_name = "devtest"
 
-#VPC Vars
-#aws_vpc_cidr_block       = "10.250.192.0/18"
-#aws_cidr_subnets_private = ["10.250.192.0/20", "10.250.208.0/20"]
-#aws_cidr_subnets_public  = ["10.250.224.0/20", "10.250.240.0/20"]
-
-# single AZ deployment
-#aws_cidr_subnets_private = ["10.250.192.0/20"]
-#aws_cidr_subnets_public  = ["10.250.224.0/20"]
-
-# 3+ AZ deployment
-#aws_cidr_subnets_private = ["10.250.192.0/24","10.250.193.0/24","10.250.194.0/24","10.250.195.0/24"]
-#aws_cidr_subnets_public  = ["10.250.224.0/24","10.250.225.0/24","10.250.226.0/24","10.250.227.0/24"]
+private_subnets=["subnet-00cef52dd64304b35","subnet-0f741dbdc133a669c"]
+public_subnets=["subnet-09de534a06e014d69","subnet-09a6ca3c1f8ff1964"]
 
 #Bastion Host
 aws_bastion_num  = 1
