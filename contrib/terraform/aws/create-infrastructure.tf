@@ -55,7 +55,7 @@ resource "aws_instance" "bastion-server" {
   instance_type               = var.aws_bastion_size
   count                       = var.aws_bastion_num
   associate_public_ip_address = true
-  subnet_id                   = element(module.aws-vpc.aws_subnet_ids_public, count.index)
+  subnet_id                   = element(var.public_subnets, count.index)
 
   vpc_security_group_ids = module.aws-vpc.aws_security_group
 
