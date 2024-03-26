@@ -15,6 +15,7 @@ data "aws_availability_zones" "available" {}
 * and AWS IAM Roles for Kubernetes Deployment
 */
 
+/*
 module "aws-vpc" {
   source = "./modules/vpc"
 
@@ -37,7 +38,7 @@ module "aws-nlb" {
   k8s_secure_api_port   = var.k8s_secure_api_port
   default_tags          = var.default_tags
 }
-
+*/
 module "aws-iam" {
   source = "./modules/iam"
 
