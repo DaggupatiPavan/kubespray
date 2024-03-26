@@ -57,7 +57,7 @@ resource "aws_instance" "bastion-server" {
   associate_public_ip_address = true
   subnet_id                   = element(var.public_subnets, count.index)
 
-  vpc_security_group_ids = module.aws-vpc.aws_security_group
+  vpc_security_group_ids = [aws_security_group.security_sg.id]
 
   key_name = var.AWS_SSH_KEY_NAME
 
@@ -79,9 +79,9 @@ resource "aws_instance" "k8s-master" {
 
   count = var.aws_kube_master_num
 
-  subnet_id = element(module.aws-vpc.aws_subnet_ids_private, count.index)
+  subnet_id = element(var.private_subnets, count.index)
 
-  vpc_security_group_ids = module.aws-vpc.aws_security_group
+  vpc_security_group_ids = [aws_security_group.security_sg.id]
 
   root_block_device {
     volume_size = var.aws_kube_master_disk_size
