@@ -26,6 +26,7 @@ module "aws-vpc" {
   aws_cidr_subnets_public  = var.aws_cidr_subnets_public
   default_tags             = var.default_tags
 }
+*/
 
 module "aws-nlb" {
   source = "./modules/nlb"
@@ -38,7 +39,7 @@ module "aws-nlb" {
   k8s_secure_api_port   = var.k8s_secure_api_port
   default_tags          = var.default_tags
 }
-*/
+
 module "aws-iam" {
   source = "./modules/iam"
 
