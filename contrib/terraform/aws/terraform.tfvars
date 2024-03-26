@@ -1,6 +1,7 @@
 #Global Vars
 aws_cluster_name = "devtest"
 
+vpc_id ="vpc-05d7fb7f1331f8f16"
 private_subnets=["subnet-00cef52dd64304b35","subnet-0f741dbdc133a669c"]
 public_subnets=["subnet-09de534a06e014d69","subnet-09a6ca3c1f8ff1964"]
 
